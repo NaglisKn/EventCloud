@@ -2,11 +2,12 @@
     <h2>
         <span>@L("Events")</span>
         <a ng-click="vm.openNewEventDialog()" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> @L("NewEvent")</a>
-        <span class="pull-right event-filters">
+        <span class="event-filters">
             <span>@L("Search"): </span>
             <input ng-change="vm.search()" type="text" ng-model="vm.filters.searchEventTitle" />
+        </span>
+        <span class="pull-right event-filters">
             <input type="checkbox" ng-model="vm.filters.includeCanceledEvents" /> @L("ShowCanceledEvents")
-            <!--<a ng-click="vm.search()" class="btn btn-primary btn-sm"><i class="fa"></i>Search</a>-->
         </span>
     </h2>
     <div class="row">
@@ -27,9 +28,6 @@
                     <span ng-if="event.maxRegistrationCount <= 0">
                         @L("XregisteredUnlimitedRegistrations", "{{event.registrationsCount}}")
                     </span>
-                </div>
-                <div class="event-registration-info">
-                    <p class="event-description">This event is created by: {{event.tenantId}}</p>
                 </div>
                 <div class="event-actions">
                     <a class="btn btn-sm btn-info" ng-href="#/events/{{event.id}}">@L("Details") <i class="fa fa-arrow-circle-right"></i></a>
