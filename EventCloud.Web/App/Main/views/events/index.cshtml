@@ -9,6 +9,9 @@
         <span class="pull-right event-filters">
             <input type="checkbox" ng-model="vm.filters.includeCanceledEvents" /> @L("ShowCanceledEvents")
         </span>
+        <span class="pull-right event-filters">
+            <input type="checkbox" ng-model="vm.filters.includeFinishedEvents" /> @L("ShowFinishedEvents")
+        </span>
     </h2>
     <div class="row">
         <div ng-repeat="event in vm.events" class="event-list-item col-md-6">

@@ -38,6 +38,7 @@
     <text name="Search" value="Paieška" />
     <text name="Events" value="Renginiai" />
     <text name="NewEvent" value="Naujas renginys" />
+    <text name="ShowFinishedEvents" value="Rodyti pasibaigusius renginius" />
     <text name="ShowCanceledEvents" value="Parodyti atšauktus renginius" />
     <text name="ThisEventIsCanceled" value="Šis renginys atšauktas" />
     <text name="Details" value="Aprašymas" />

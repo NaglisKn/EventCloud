@@ -35,6 +35,7 @@ namespace EventCloud.Events
                 .GetAll()
                 .Include(e => e.Registrations)
                 .Where(e => e.Title.Contains(input.SearchEventTitle))
+                .WhereIf(!input.IncludeFinishedEvents, e => e.Date > DateTime.Now)
                 .WhereIf(!input.IncludeCanceledEvents, e => !e.IsCancelled)
                 .OrderByDescending(e => e.CreationTime)
                 .Take(64)

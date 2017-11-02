@@ -15,7 +15,7 @@
     
     <text name="FormIsNotValidMessage" value="Form is not valid. Please check and fix errors." />
     <text name="TenantNameCanNotBeEmpty" value="Tenant name can not be empty" />
-
+    
     <text name="InvalidUserNameOrPassword" value="Invalid user name or password" />
     <text name="ThereIsNoTenantDefinedWithName{0}" value="There is no tenant defined with name {0}" />
     <text name="TenantIsNotActive" value="Tenant {0} is not active." />
@@ -38,6 +38,7 @@
     <text name="Search" value="Search" />
     <text name="Events" value="Events" />
     <text name="NewEvent" value="New event" />
+    <text name="ShowFinishedEvents" value="Show finished events" />
     <text name="ShowCanceledEvents" value="Show canceled events" />
     <text name="ThisEventIsCanceled" value="This event is canceled" />
     <text name="Details" value="Details" />

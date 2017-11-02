@@ -8,19 +8,18 @@
             vm.events = [];
             vm.filters = {
                 includeCanceledEvents: false,
+                includeFinishedEvents: false,
                 searchEventTitle: ''
             };
 
             function loadEvents() {
-                console.log("LoadEvents");
                 eventService.getList(vm.filters).success(function (result) {
                     vm.events = result.items;
                 });
             };
 
             vm.search = function () {
-                console.log("paspausta");
-                    loadEvents();
+                loadEvents();
             };
 
             vm.openNewEventDialog = function() {
@@ -36,6 +35,12 @@
             };
 
             $scope.$watch('vm.filters.includeCanceledEvents', function (newValue, oldValue) {
+                if (newValue != oldValue) {
+                    loadEvents();
+                }
+            });
+
+            $scope.$watch('vm.filters.includeFinishedEvents', function (newValue, oldValue) {
                 if (newValue != oldValue) {
                     loadEvents();
                 }

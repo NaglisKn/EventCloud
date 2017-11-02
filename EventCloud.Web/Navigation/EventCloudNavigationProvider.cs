@@ -28,6 +28,13 @@ namespace EventCloud.Web.Navigation
                         url: "#/about",
                         icon: "fa fa-info"
                         )
+                ).AddItem(
+                    new MenuItemDefinition(
+                        AppPageNames.Accounting,
+                        new LocalizableString("Accounting", EventCloudConsts.LocalizationSourceName),
+                        url: "#/accounting",
+                        icon: "fa fa-info"
+                        )
                 );
         }
     }
